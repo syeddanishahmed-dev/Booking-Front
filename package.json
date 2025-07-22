@@ -1,7 +1,6 @@
 {
   "name": "booking",
   "private": true,
-  "homepage": "https://syeddanishahmed-dev.github.io/Booking-Front",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
