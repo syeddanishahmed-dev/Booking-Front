@@ -1,18 +1,23 @@
-import "./list.css";
-import Navbar from "../../components/navbar/Navbar";
-import Header from "../../components/header/Header";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
 import { format } from "date-fns";
+import { useState } from "react";
 import { DateRange } from "react-date-range";
+import { useLocation } from "react-router-dom";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/navbar/Navbar";
 import SearchItem from "../../components/searchItem/SearchItem";
+import "./list.css";
 
 const List = () => {
   const location = useLocation();
-  const [destination ] = useState(location.state.destination);
-  const [date, setDate] = useState(location.state.date);
+  const [destination ] = useState(location?.state?.destination); 
+ 
+  const [date, setDate] = useState(location?.state?.date);
   const [openDate, setOpenDate] = useState(false);
-  const [options ] = useState(location.state.options);
+  const [options ] = useState(location?.state?.options);
+
+  // const cityParam = destination ? `city=${destination}&` : "";
+  //  const { data, error, loading, reFetch } = useFetch(`${import.meta.env.VITE_API_URL}/api/hotels?${cityParam}min=${min || 0}&max=${max || 9999}`)
+  // console.log(data);
 
   return (
     <div>
